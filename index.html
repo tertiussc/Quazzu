@@ -38,7 +38,7 @@
                             <a href="signup.html">Sign Up</a>
                         </li>
                         <li>
-                            <a href="#" class="btn purple">Login</a>
+                            <a href="#login-modal" class="btn purple modal-trigger">Login</a>
                         </li>
                         <li>
                             <a href="https://facebook.com">
@@ -80,6 +80,27 @@
                 </div>
             </div>
         </nav>
+        <!-- Login Modal -->
+        <div class="modal" id="login-modal">
+            <div class="modal-content">
+                <h4>Account Login</h4>
+                <p>Login to access your account dashboard</p>
+                <form>
+                    <div class="input-field">
+                        <input type="email" name="email" id="email">
+                        <label for="email"> Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password">
+                        <label for="password">Password</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close btn grey"><i class="fa fa-sync"></i> Reset Password</a>
+                <a href="#!" class="modal-action modal-close btn purple"><i class="fa fa-lock"></i> Login</a>
+            </div>
+        </div>
         <!-- Showcase Area -->
         <div class="showcase container">
             <div class="row">
@@ -209,7 +230,8 @@
                             <p class="flow-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda
                                 distinctio praesentium error ullam in, unde ratione nemo quos non repellendus rem veniam
                                 ducimus id quis officiis sunt dolore tempore?"
-                                <em>- John Doe from Microsystems</em>
+                            </p>
+                            <p class="right"> <em>- John Doe from Microsystems</em>
                             </p>
                             <div class="carousel-fixed-item center hide-on-small-and-down">
                                 <a href="#" class="btn grey">Read More</a>
@@ -220,7 +242,8 @@
                             <p class="flow-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda
                                 distinctio praesentium error ullam in, unde ratione nemo quos non repellendus rem veniam
                                 ducimus id quis officiis sunt dolore tempore?"
-                                <em>- Mike Smith from Edge Inc.</em>
+                            </p>
+                            <p class="right"> <em>- Mike Smith from Edge Inc.</em>
                             </p>
                             <div class="carousel-fixed-item center hide-on-small-and-down">
                                 <a href="#" class="btn grey">Read More</a>
@@ -231,8 +254,8 @@
                             <p class="flow-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda
                                 distinctio praesentium error ullam in, unde ratione nemo quos non repellendus rem veniam
                                 ducimus id quis officiis sunt dolore tempore?"
-                                <em>- Karen Williams from TechSoft</em>
                             </p>
+                            <p class="right"><em>- Karen Williams from TechSoft</em></p>
                             <div class="carousel-fixed-item center hide-on-small-and-down">
                                 <a href="#" class="btn grey">Read More</a>
                             </div>
@@ -242,7 +265,38 @@
             </div>
         </div>
     </section>
-
+    <!-- Footer -->
+    <footer class="page-footer deep-purple lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l6">
+                    <h5 class="white-text">About Us</h5>
+                    <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Impedit, aspernatur?</p>
+                </div>
+                <div class="col s12 l4 offset-l2">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="grey-text text-lighten-3">Home</a>
+                        </li>
+                        <li>
+                            <a href="solutions.html" class="grey-text text-lighten-3">Solutions</a>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="grey-text text-lighten-3">Signup</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright deep-purple">
+            <div class="container">
+                Quazzu &copy; 2019
+                <a href="#!" class="grey-text text-lighten-4 right">Terms and Conditions</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Link all dependent JS -->
     <!--Import jQuery before materialize.js-->
@@ -261,6 +315,8 @@
 
             // Init Carousel
             $('.carousel.carousel-slider').carousel({ fullWidth: true })
+            // Init Login Modal
+            $('.modal').modal();
         });
     </script>
 </body>
